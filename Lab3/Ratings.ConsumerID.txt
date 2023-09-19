@@ -1,0 +1,60 @@
+FIELD SPECIFICATIONS
+
+GENERAL ELEMENTS
+
+Field Name:           ConsumerID
+Parent Table:         Ratings
+Alias(es):            _ 
+Specification Type:
+  Unique:  - 
+  Generic: _ 
+  Replica: X 
+Source Specification:  Consumer
+Shared By:            Consumer, Ratings 
+Description:          ID number assigned to the person rating the movie 
+
+
+PHYSICAL ELEMENTS
+
+Data Type:            INT 
+Length:               1 
+Decimal Places:       no 
+Character Support:
+  Letters (A-Z):      no
+  Numbers (0-9):      yes 
+  Keyboard (.,/$#%):  no
+  Special (©®™Σπ):    no
+
+
+LOGICAL ELEMENTS
+
+Key Type:      Non:        _ 
+               Primary:    _ 
+               Foreign:    X 
+               Alternate:  _ 
+
+Key Structure: Simple:     x 
+               Composite:  _ 
+
+Uniqueness:    Non-unique: _ 
+               Unique:     X 
+
+Null Support:  Nulls OK:   _ 
+               No nulls:   X
+
+Values Entered By: User:   _ 
+                   System: X 
+
+Required Value:    No:     _ 
+                   Yes:    X 
+
+Range of Values:   Auto increment- # of users 
+
+Edit Rule:
+  Enter now, edits allowed:       _ 
+  Enter now, edits not allowed:   X 
+  Enter later, edits allowed:     _ 
+  Enter later, edits not allowed: _ 
+  Not determined at this time:    _ 
+
+NOTES: _
