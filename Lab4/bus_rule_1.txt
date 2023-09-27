@@ -1,0 +1,53 @@
+Statement:  Customers are Customers for life, they can never be deleted. Can be
+considered inactive if no activity for 2 or more years, or if address is invalid
+
+Constraint: We do not want to keep inactive customers, but want to keep record of them.
+
+Type:     Database Oriented:     x 
+          Application Oriented   _ 
+
+Category: Field Specific:        x 
+          Relationship Specific: _ 
+
+Test On:  Insert:                _ 
+          Delete:                _ 
+          Update:                x
+
+
+STRUCTURES AFFECTED
+
+Field Names: CustomerID, Address, name, phone
+
+Table Names: CustomerInfo
+
+
+FIELD ELEMENTS AFFECTED
+
+Physical Elements: Data Type:           INT 
+                   Length:              _ 
+                   Character Support:   _ 
+
+Logical Elements:  Key Type:            Primary 
+                   Key Structure:       _ 
+                   Uniqueness:          Unique 
+                   Null Support:        No 
+                   Values Entered By:   user 
+                   Range of Values:     _ 
+                   Edit Rule:           Enter now, edits allowed 
+
+
+RELATIONSHIP CHARACTERISTICS AFFECTED
+
+    Deletion rule:              -
+    Type of participation:      _
+    Degree of participation:    _
+
+    
+ACTION TAKEN
+
+Deletion rule set to "deny", so that customer 
+is inactive, but still in system incase they return.
+
+
+NOTES: Entire customer info "deny"- so that the customer is not visible in
+database under the list of customers.

@@ -1,0 +1,53 @@
+Statement:  Rugs can only be rented out by one 
+person at a time. 
+Constraint: This must be trackable 
+
+Type:     Database Oriented:     x 
+          Application Oriented   _ 
+
+Category: Field Specific:        x 
+          Relationship Specific: _ 
+
+Test On:  Insert:                _ 
+          Delete:                _ 
+          Update:                _
+
+
+STRUCTURES AFFECTED
+
+Field Names:  is_availible
+
+Table Names: Carpet Inventory
+
+
+FIELD ELEMENTS AFFECTED
+
+Physical Elements: Data Type:           Boolean 
+                   Length:              _ 
+                   Character Support:   no 
+
+Logical Elements:  Key Type:            _ 
+                   Key Structure:       _ 
+                   Uniqueness:          no 
+                   Null Support:        no
+                   Values Entered By:   user 
+                   Range of Values:     _ 
+                   Edit Rule:           enter now, can be changed
+
+
+RELATIONSHIP CHARACTERISTICS AFFECTED
+
+    Deletion rule:              _
+    Type of participation:      _
+    Degree of participation:    _
+
+    
+ACTION TAKEN
+
+Added a "is_rented" boolean field, 
+True if carpet is currently being rented,
+false if it is not being rented and 
+is availible.
+
+
+NOTES: _
