@@ -19,7 +19,7 @@ USE school;
     the instructor's first name, last name, and campus phone number.
     These will all be characters, besides the ID, which is an integer.
 */
-CREATE TABLE instructors (
+CREATE TABLE instructors(
     PRIMARY KEY (instructor_id),
     instructor_id       INT AUTO_INCREMENT,
     inst_first_name     VARCHAR(20),
