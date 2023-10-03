@@ -1,3 +1,5 @@
+-- REMEMBER you said comments were not that important 
+
 DROP DATABASE IF EXISTS flying_carpets;
 CREATE DATABASE flying_carpets;
 USE flying_carpets;
