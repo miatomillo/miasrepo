@@ -109,7 +109,7 @@ CREATE TABLE Consumers (
     ConsumerAddress         VARCHAR(50),
     ConsumerCity            VARCHAR(50),
     ConsumerState           VARCHAR(50),
-    ZIPCode                 VARCHAR(50) --Varchar(50) to show 0's--
+    ZIPCode                 VARCHAR(50) -- Varchar(50) to show 0's-- The space between -- and Varchar(50) is required. - WM
 );
 
 CREATE TABLE Ratings (

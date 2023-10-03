@@ -1,4 +1,5 @@
-DROP DATABASE IF DATABASE EXISTS flying_carpets;
+-- DROP DATABASE IF DATABASE EXISTS flying_carpets; -- WB This is the problem!
+DROP DATABASE IF EXISTS flying_carpets; -- Use this instead! -- WB
 CREATE DATABASE flying_carpets;
 USE flying_carpets;
 
@@ -12,6 +13,7 @@ CREATE TABLE CustomerInfo (
     Customer_State          VARCHAR(50),
     Customer_Zipcode        VARCHAR(50),
     Customer_Phone          VARCHAR(50)
+    -- There should be some foreign key constraints here!
 );
 
 CREATE TABLE Carpet_Inventory (
@@ -26,7 +28,8 @@ CREATE TABLE Carpet_Inventory (
     Carpet_Purchase_Price   INT,
     Date_Aquired            VARCHAR(50),
     Carpet_Markup           VARCHAR(50),
-    Carpet_List_Price       INT
+    Carpet_List_Price       INT,
+    -- There should be some (3) foreign key constraints here! -- WB
 );
 
 CREATE TABLE Purchases (
