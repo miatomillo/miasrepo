@@ -4,25 +4,14 @@
     error_reporting(E_ALL);
 ?>
 <?php
-    $dbhost = 'localhost';
-    $dbuser = 'miatomillo'; 
-    $dbpass = 'centre2024';
-
-                               
-
-
-$conn = new mysqli($dbhost, $dbuser, $dbpass);
-
-
-    if ($conn->connect_errno) {
-        echo "Error: Failed to make a MySQL connection, here is why: ". "<br>";
-        echo "Errno: " . $conn->connect_errno . "\n";
-        echo "Error: " . $conn->connect_error . "\n";
-        exit; 
-    } else {
-        echo "Connected Successfully!" . "<br>";
-        echo "YAY!" . "<br>";
-    }
+$config = parse_ini_file('/home/miatomillo/mysqli.ini');
+$dbname = 'instrument_rentals';
+$conn = new mysqli(
+            $config['mysqli.default_host'],
+            $config['mysqli.default_user'],
+            $config['mysqli.default_pw'],
+            $dbname
+            )
 
 ?>
 <?php $dblist = "SHOW databases"; 
