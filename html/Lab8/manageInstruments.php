@@ -154,5 +154,5 @@ result_to_html_table($select_result);
    </p>
    <?php
    }
-   ?>
+   ?> 
 </html>
