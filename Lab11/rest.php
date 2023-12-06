@@ -11,7 +11,7 @@
         error_reporting(E_ALL);
 
         $config = parse_ini_file('/home/miatomillo/mysqli.ini');
-$dbname = 'instrument_rentals';
+$dbname = 'robotic_restaurant.sql';
 
 if (!$conn = new mysqli($config['mysqli.default_host'],
     $config['mysqli.default_user'],
