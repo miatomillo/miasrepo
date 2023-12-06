@@ -1,9 +1,9 @@
 <?php
-        //   $common_path = "../../../common/";
-        //   $sql_path = "../../../web_sql/robotic_restaurant/";
+        //    $common_path = "../../../common/";
+            // $sql_path = "/home/miatomillo/Lab11/robotic_restaurant/";
      
-        //   require $common_path . "format_result.php";
-        //   require $common_path . "show_link_to_source.php";
+        //    require $common_path . "format_result.php";
+        //    require $common_path . "show_link_to_source.php";
      
          // Show ALL PHP's errors.
          ini_set('display_errors', 1);
@@ -11,44 +11,42 @@
         error_reporting(E_ALL);
 
         $config = parse_ini_file('/home/miatomillo/mysqli.ini');
-$dbname = 'robotic_restaurant.sql';
-
-if (!$conn = new mysqli($config['mysqli.default_host'],
-    $config['mysqli.default_user'],
-    $config['mysqli.default_pw'],
-    $dbname)){
-     echo "Error: Failed to make a MySQL connection: " . "<br>";
-     echo "Errno: $conn->connect_errno; i.e. $conn->connect_error \n";
-     exit;
-    }
-    else
-    {echo "Connected Sucessfully" ;}
-
-     
-    
-        // Hard-code our connection parameters.
-        $config = parse_ini_file($common_path . 'mysqli.ini');
         $dbname = 'robotic_restaurant';
-    
-        if (!$conn = new mysqli(
-            $config['mysqli.default_host'],
+        
+        if (!$conn = new mysqli($config['mysqli.default_host'],
             $config['mysqli.default_user'],
             $config['mysqli.default_pw'],
-            $dbname
-        )) {
-            echo "Could not connect.<br>";
-            echo "Error Num: $conn->connect_errno <br>";
-            echo "Error Msg: $conn->connect_error <br>";
-            exit;
-        }
+            $dbname)){
+             echo "Error: Failed to make a MySQL connection: " . "<br>";
+             echo "Errno: $conn->connect_errno; i.e. $conn->connect_error \n";
+             exit;
+            }
+            else
+            {echo "Connected Sucessfully" ;}
+    
+        // // Hard-code our connection parameters.
+        // $config = parse_ini_file('/home/miatomillo/mysqli.ini');
+        // // parse_ini_file($common_path . 'mysqli.ini');
+        // $dbname = 'robotic_restaurant';
+    
+        // if (!$conn = new mysqli(
+        //     $config['mysqli.default_host'],
+        //     $config['mysqli.default_user'],
+        //     $config['mysqli.default_pw'],
+        //     $dbname
+        // )) {
+        //     echo "Could not connect.<br>";
+        //     echo "Error Num: $conn->connect_errno <br>";
+        //     echo "Error Msg: $conn->connect_error <br>";
+        //     exit;
+        // }
     ?>
     <!DOCTYPE html>
     <head>
         <title>Place an Order</title>
     </head>
     <body>
-    <a href="../../index.html">Back to Home Page</a> &nbsp;
-    <?php show_link_to_source(basename(__file__)); ?>
+  
     
     <h1>Welcome to Alice's <code>Robotic</code> Restaurant</h1>
     <p>You can <code>grep</code> anything you want from Alice's restaurant.</p>
